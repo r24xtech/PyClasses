@@ -64,3 +64,18 @@ def update_odometer(self, mileage):
 	self.odometer_reading = mileage
 my_new_car.update_odometer(23)
 ```
+<hr><hr>
+
+**Inheritance**
+* The child class can inherit any or all of the attributes and methods of its parent class, but it’s also free to define new attributes and methods of its own.
+* The name of the par-ent class must be included in parentheses in the definition of a child class.
+* The super() function is a special function that allows you to call a method from the parent class. 
+```python
+class ElectricCar(Car):
+	def __init__(self, make, model, year):
+		super().__init__(make, model, year)
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+```
