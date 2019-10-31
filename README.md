@@ -54,3 +54,13 @@ my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
 ```
+Modifying Attribute Values
+1. change the value directly through an instance `my_new_car.odometer_reading = 23`
+2. set the value through a method
+3. increment the value (add a certain amount to it) through a method.
+```python
+## (2)
+def update_odometer(self, mileage):
+	self.odometer_reading = mileage
+my_new_car.update_odometer(23)
+```
