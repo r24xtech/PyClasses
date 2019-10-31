@@ -22,7 +22,7 @@ class Dog:
 * The `__init__()` method is a special method that Python runs automatically whenever we create a new instance based on the Dog class.
 * The self parameter is required in the method definition, and it must come first before the other parameters. It must be included in the definition because when Python calls this method later (to create an instance of Dog), the method call will automatically pass the self argument. 
 * Every method call associated with an instance automatically passes self, which is a reference to the instance itself; it gives the individual instance access to the attributes and methods in the class. When we make an instance of Dog, Python will call the `__init__()` method from the Dog class.
-* The line `self.name = name` takes the value associated with the parameter name and assigns it to the variable name, which is then attached to the instance being created. The same process happens with self.age = age. Variables that are accessible through instances like this are called **attributes**.
+* The line `self.name = name` takes the value associated with the parameter name and assigns it to the variable name, which is then attached to the instance being created. The same process happens with `self.age = age`. Variables that are accessible through instances like this are called **attributes**.
 ```python
 my_dog = Dog('Willie', 6)
 
