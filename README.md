@@ -79,3 +79,42 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 ```
+=> Defining Attributes and Methods for the Child Class
+```python
+class ElectricCar(Car):
+
+	def __init__(self, make, model, year):
+		super().__init__(make, model, year)
+		self.battery_size = 75
+
+	def describe_battery(self):
+		print(f"This car has a {self.battery_size}-kWh battery.")
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+```
+=> Instances as Attributes
+```python
+class Battery:
+	def __init__(self, battery_size=75):
+		self.battery_size = battery_size
+
+	def describe_battery(self):
+		print(f"This car has a {self.battery_size}-kWh battery.")
+
+class ElectricCar(Car):
+
+	def __init__(self, make, model, year):
+		super().__init__(make, model, year)
+		self.battery = Battery()
+
+	def describe_battery(self):
+		print(f"This car has a {self.battery_size}-kWh battery.")
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+```
